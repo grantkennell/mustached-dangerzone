@@ -122,9 +122,9 @@ int main(void)
         printf("%c", rec_buf[i]);
       }
       printf("\"\n");
-      close(sockfd); // child doesn't need the listener
-      if (send(new_fd, "Hello, world!", 13, 0) == -1)
+      if (send(sockfd, rec_buf, rec_size, 0) == -1)
         perror("send");
+      close(sockfd); // child doesn't need the listener
       close(new_fd);
       exit(0);
     }
