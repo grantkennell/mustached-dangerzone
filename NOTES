@@ -1,0 +1,4 @@
+make response parsing function, returns req_struct
+OR getRequest() {recieve, parse, return req_struct}
+
+sendResponse(req_struct, socket_id);
